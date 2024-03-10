@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MLBB Diamond Giveaway</title>
+  <style>body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f9f9f9; /* Light gray background */
+  }
+  
+  .container {
+    margin-top: 70px;
+    padding: 20px;
+    background-color: #ffffff; /* White background for container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  }
+  
+  h1 {
+    color: #007bff; /* Blue color for attention */
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue color for button */
+    color: #ffffff; /* White color for button text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+  }
+  
+  .hidden {
+    display: none; /* Hide prank message by default */
+  }
+  
+  #prank-message {
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  #unfortunately-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff0000; /* Red color for unfortunately message */
+    color: #ffffff; /* White color for text */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <img src="C:\Users\Shimray\OneDrive\Documents\Desktop\Pictures\Screenshots\Screenshot 2024-03-10 165718.png" alt=""> <!-- Include MLBB logo -->
+    <h1>MLBB Diamond Giveaway</h1>
+    <form id="diamond-form">
+      <input type="text"id="username" placeholder="Enter your MLBB id">
+      <button type="submit">Enter</button>
+    </form>
+    <div id="prank-message" class="hidden">
+      <img src="C:\Users\Shimray\OneDrive\Documents\Desktop\Pictures\Screenshots\Screenshot 2024-03-10 164829.png" alt=""> <!-- Include diamond logo -->
+      <p>Congratulations! You've won <span id="diamond-amount">100</span> diamonds!</p> <!-- Amount of diamonds won -->
+      <p>Unfortunately, this is just a prank. Try again next time! Nubb nali free diamond Samphng maraola</p>
+    </div>
+    <a href="https://wa.me/9233003410/?text=I'm interested in your product." target="_blank" class="whatsapp-link">Chat with us on WhatsApp/ 
+        SHIMRAY'S FUN ZONE...
+    </a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+  <script>
+document.getElementById("diamond-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  var username = document.getElementById("username").value;
+  var diamondAmount = Math.floor(Math.random() * 1000) + 1; // Generate a random number between 1 and 1000 as the amount of diamonds won
+  var prankMessage = document.getElementById("prank-message");
+  var diamondAmountElement = document.getElementById("diamond-amount");
+
+  // Update the diamond amount in the message
+  diamondAmountElement.textContent = diamondAmount;
+
+  // Show prank message
+  prankMessage.classList.remove("hidden");
+});
+  </script>
+</body>
+</html>
